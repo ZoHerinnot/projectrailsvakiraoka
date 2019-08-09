@@ -1,0 +1,28 @@
+
+
+
+<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+        <%user = @potin.user.id%>
+    <div class="card-header">Auteur : <%=User.find(user).first_name %> <%=link_to "Details",controller:"users", action: "show", id: user%></div>
+    <div class="card-body">
+    
+    <h1 class="card-text" class="text-align: center"><%=@potin.title%></h1>
+    <h5 class="card-title">Content :<%=@potin.content%></h5>  
+    <%city = User.find(user).city_id%>
+    <p class="card-text"> City : <%=City.find(city).name%></p>      
+    <%= link_to "Back" , controller:"gossips", action:"index"%>
+     
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
